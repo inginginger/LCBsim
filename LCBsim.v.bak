@@ -1,0 +1,11 @@
+module LCBsim(
+input clk80MHz,
+input dirRX,//dirTX от яфк
+input dirTX,//dirRX от яфк
+input RX,//TX от яфк
+output TX//RX для яфк
+);
+
+
+
+endmodule
