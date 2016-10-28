@@ -1,1 +1,2 @@
 Info (10281): Verilog HDL Declaration information at UART_TX.v(12): object "tx" differs only in case from object "TX" in the same scope
+Info (10281): Verilog HDL Declaration information at RQform.v(10): object "delay" differs only in case from object "DELAY" in the same scope

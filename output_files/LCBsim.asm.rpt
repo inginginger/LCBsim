@@ -1,5 +1,5 @@
 Assembler report for LCBsim
-Fri Oct 28 11:34:44 2016
+Fri Oct 28 15:32:14 2016
 Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Oct 28 11:34:44 2016 ;
+; Assembler Status      ; Successful - Fri Oct 28 15:32:14 2016 ;
 ; Revision Name         ; LCBsim                                ;
 ; Top-level Entity Name ; LCBsim                                ;
 ; Family                ; Cyclone III                           ;
@@ -94,8 +94,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                    ;
 +----------------+------------------------------------------------------------+
 ; Device         ; EP3C10E144C8                                               ;
-; JTAG usercode  ; 0x000ACE7F                                                 ;
-; Checksum       ; 0x000ACE7F                                                 ;
+; JTAG usercode  ; 0x000AEDE5                                                 ;
+; Checksum       ; 0x000AEDE5                                                 ;
 +----------------+------------------------------------------------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+--------------------------------------------------------+
 ; Device             ; EPCS16                                                 ;
 ; JTAG usercode      ; 0x00000000                                             ;
-; Checksum           ; 0x1E5D5E5D                                             ;
+; Checksum           ; 0x1E5CF46C                                             ;
 ; Compression Ratio  ; 3                                                      ;
 +--------------------+--------------------------------------------------------+
 
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Oct 28 11:34:43 2016
+    Info: Processing started: Fri Oct 28 15:32:13 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off LCBsim -c LCBsim
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 32-bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 381 megabytes
-    Info: Processing ended: Fri Oct 28 11:34:44 2016
+    Info: Processing ended: Fri Oct 28 15:32:14 2016
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

@@ -6,20 +6,19 @@ module UART_TX
   input reset,          // global reset and enable signal
   input clk,            // actual needed baudrate (tested on 4,8 MHz)
   input RQ,            // start transfer signal
-  //input [4:0]cycle,
-  
-  output [8:0]addr,
+  input [4:0]cycle,
+  //input [7:0]data,
+  output [4:0]addr,
   output reg tx,          // serial transmitted data
   output reg dirTX,        // rs485 TX dir controller 
   output reg dirRX,        // rs485 RX dir controller
   output reg [4:0]switch  // memory switcher
 );
 
-//  wire [7:0]data;        // 8bits data 
+  reg [7:0]data;        // 8bits data 
 //  wire [8:0]addr;
   //reg unsigned [4:0]cycle;
-reg [7:0]data;
-reg [7:0] cnt;
+	reg [7:0] cnt;
   assign addr = switch;
   
 //dROM innerMEM(
@@ -93,6 +92,7 @@ end else begin            // main circuit
   endcase 
 end
 end
+
 always@(posedge clk or negedge reset)
 begin
 	if(~reset) begin
@@ -129,5 +129,4 @@ begin
 		endcase
 	end
 end
-
 endmodule

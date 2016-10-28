@@ -6,6 +6,9 @@ input RX,//TX от яфк
 output [7:0] DataFromCFM,
 output ValRX,
 output LCBreq,
+output test1,
+output test2,
+output test3,
 output TX//RX для яфк
 //output rst
 );
@@ -16,7 +19,10 @@ wire clk4_8MHz;
 //wire LCBreq;
 //wire ValRX;
 //wire [7:0] DataFromCFM;
-
+//assign test = ans_addr[4];
+assign test1 = LCBreq;
+assign test2 = ValRX;
+assign test3 = TX;
 globalReset inst1(
 	.clk(clk80MHz),	// 40 MHz
 	.rst(rst)			// global enable
@@ -33,14 +39,14 @@ UART_RX inst2(
 	.RX(RX),
 	.oValid(ValRX),
 	.oData(DataFromCFM),
-	.RQ(LCBreq)
+	//.RQ(LCBreq)
 );
 
-/*RQform inst3(
+RQform inst3(
 	.clk80MHz(clk80MHz),
 	.rst(rst),
 	.val(ValRX),
-	.RQ(LCBreq));*/
+	.RQ(LCBreq));
 
 /*answers inst4(
 	.clk80MHz(clk80MHz),
