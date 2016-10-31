@@ -25,23 +25,26 @@ begin
 	else begin
 		case(state)
 			IDLE: begin
-				RQ <= 1'b0;
 				if(syncStrob[1])
 					state <= CNT;
 			end
 			CNT: begin
-				counter <= counter + 1;
-				if(counter == 2'd3)
+				if(counter == 2'd3) begin
 					RQ <= 1'b1;
+					counter <= 2'd0;
+				end
+				else 
+					counter <= counter + 1'b1;
 				state <= DELAY;
 			end
 			DELAY: begin
-				delay <= delay + 1'b1;
 				if(delay == 5'd31) begin
 					delay <= 5'd0;
 					RQ <= 1'b0;
 					state <= WAIT;
 				end
+				else
+					delay <= delay + 1'b1;
 			end
 			WAIT:
 				if(~syncStrob[1])
