@@ -47,7 +47,7 @@ RQform inst3(
 	.RQ(LCBreq));
 
 answers inst4(
-	.clk(clk4_8MHz),
+	.clk(clk80MHz),
 	.rst(rst),
 	.addr(ans_addr),
 	.data(ans_data)

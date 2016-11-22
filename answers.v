@@ -36,10 +36,8 @@ begin
 			14 : data <= 8'd140;
 			15 : data <= 8'd150;
 			16 : data <= 8'd160;
-			17 : data <= 8'd170;
-			18 : data <= 8'd180;
-			19 : begin
-				data <= 8'd190;
+			17 : begin
+				data <= 8'd170;
 				if(only == 1'b0) begin
 					cnt <= cnt + 1'b1;
 					only <= 1'b1;

@@ -66,7 +66,7 @@ end else begin            // main circuit
         end
         10: begin
           serialize <= 4'd0; // reset sequencer
-          if (switch == 5'd20) begin 
+          if (switch == 5'd18) begin 
             switch <= 5'd0; 
             state <= DIROFF; 
           end  // if completed transfer proceed to next state 
