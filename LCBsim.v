@@ -50,7 +50,9 @@ answers inst4(
 	.clk(clk80MHz),
 	.rst(rst),
 	.addr(ans_addr),
-	.data(ans_data)
+	.data(ans_data),
+	.strob(ValRX),
+	.slowData(DataFromCFM)
 );
 
 UART_TX inst5(
