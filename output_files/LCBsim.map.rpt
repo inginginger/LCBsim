@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LCBsim
-Thu Nov 24 12:10:40 2016
+Thu Nov 24 15:54:20 2016
 Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -54,15 +54,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 24 12:10:39 2016      ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 24 15:54:20 2016      ;
 ; Quartus II 32-bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; LCBsim                                     ;
 ; Top-level Entity Name              ; LCBsim                                     ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 221                                        ;
-;     Total combinational functions  ; 199                                        ;
-;     Dedicated logic registers      ; 138                                        ;
-; Total registers                    ; 138                                        ;
+; Total logic elements               ; 225                                        ;
+;     Total combinational functions  ; 203                                        ;
+;     Dedicated logic registers      ; 139                                        ;
+; Total registers                    ; 139                                        ;
 ; Total pins                         ; 19                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -201,20 +201,20 @@ applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 221            ;
+; Estimated Total logic elements              ; 225            ;
 ;                                             ;                ;
-; Total combinational functions               ; 199            ;
+; Total combinational functions               ; 203            ;
 ; Logic element usage by number of LUT inputs ;                ;
 ;     -- 4 input functions                    ; 97             ;
-;     -- 3 input functions                    ; 30             ;
-;     -- <=2 input functions                  ; 72             ;
+;     -- 3 input functions                    ; 31             ;
+;     -- <=2 input functions                  ; 75             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 146            ;
-;     -- arithmetic mode                      ; 53             ;
+;     -- normal mode                          ; 149            ;
+;     -- arithmetic mode                      ; 54             ;
 ;                                             ;                ;
-; Total registers                             ; 138            ;
-;     -- Dedicated logic registers            ; 138            ;
+; Total registers                             ; 139            ;
+;     -- Dedicated logic registers            ; 139            ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 19             ;
@@ -224,7 +224,7 @@ applicable agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; clk80MHz~input ;
 ; Maximum fan-out                             ; 114            ;
-; Total fan-out                               ; 1151           ;
+; Total fan-out                               ; 1165           ;
 ; Average fan-out                             ; 3.06           ;
 +---------------------------------------------+----------------+
 
@@ -234,11 +234,11 @@ applicable agreement for further details.
 +--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                 ; Library Name ;
 +--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+--------------+
-; |LCBsim                              ; 199 (0)           ; 138 (0)      ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |LCBsim                                                             ; work         ;
+; |LCBsim                              ; 203 (0)           ; 139 (0)      ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |LCBsim                                                             ; work         ;
 ;    |RQform:inst3|                    ; 17 (17)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCBsim|RQform:inst3                                                ; work         ;
 ;    |UART_RX:inst2|                   ; 51 (51)           ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCBsim|UART_RX:inst2                                               ; work         ;
-;    |UART_TX:inst5|                   ; 52 (52)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCBsim|UART_TX:inst5                                               ; work         ;
-;    |answers:inst4|                   ; 36 (36)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCBsim|answers:inst4                                               ; work         ;
+;    |UART_TX:inst5|                   ; 57 (57)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCBsim|UART_TX:inst5                                               ; work         ;
+;    |answers:inst4|                   ; 35 (35)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCBsim|answers:inst4                                               ; work         ;
 ;    |globalReset:inst1|               ; 43 (43)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCBsim|globalReset:inst1                                           ; work         ;
 ;    |pll:mypll|                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCBsim|pll:mypll                                                   ; work         ;
 ;       |altpll:altpll_component|      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCBsim|pll:mypll|altpll:altpll_component                           ; work         ;
@@ -317,12 +317,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 138   ;
-; Number of registers using Synchronous Clear  ; 18    ;
+; Total registers                              ; 139   ;
+; Number of registers using Synchronous Clear  ; 19    ;
 ; Number of registers using Synchronous Load   ; 7     ;
-; Number of registers using Asynchronous Clear ; 99    ;
+; Number of registers using Asynchronous Clear ; 100   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 92    ;
+; Number of registers using Clock Enable       ; 93    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -344,9 +344,10 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 ; 32:1               ; 8 bits    ; 168 LEs       ; 96 LEs               ; 72 LEs                 ; Yes        ; |LCBsim|answers:inst4|data[7]   ;
 ; 17:1               ; 5 bits    ; 55 LEs        ; 5 LEs                ; 50 LEs                 ; Yes        ; |LCBsim|UART_TX:inst5|switch[1] ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |LCBsim|UART_TX:inst5|delay[0]  ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |LCBsim|UART_TX:inst5|delay[0]  ;
 ; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |LCBsim|RQform:inst3|Selector1  ;
-; 11:1               ; 5 bits    ; 35 LEs        ; 20 LEs               ; 15 LEs                 ; No         ; |LCBsim|UART_TX:inst5|Selector5 ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |LCBsim|UART_TX:inst5|Selector5 ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 4 LEs                ; 10 LEs                 ; No         ; |LCBsim|UART_TX:inst5|Selector8 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
@@ -786,7 +787,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu Nov 24 12:10:37 2016
+    Info: Processing started: Thu Nov 24 15:54:18 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LCBsim -c LCBsim
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Warning (10275): Verilog HDL Module Instantiation warning at LCBsim.v(41): ignored dangling comma in List of Port Connections
@@ -886,15 +887,15 @@ Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Projects/LCB_simulator/output_files/LCBsim.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 242 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 246 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 222 logic cells
+    Info (21061): Implemented 226 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 401 megabytes
-    Info: Processing ended: Thu Nov 24 12:10:40 2016
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Thu Nov 24 15:54:20 2016
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

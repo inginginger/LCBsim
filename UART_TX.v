@@ -24,7 +24,7 @@ localparam WAIT=0, MEGAWAIT=1, DIRON=2, TX=3, DIROFF=4;
 
 reg [2:0] state;
 reg [3:0] serialize;
-reg [5:0] delay;
+reg [6:0] delay;
 reg [1:0] rqsync;
 
 always@(posedge clk) begin      // double d-flipflop to avoid metastability
@@ -36,7 +36,7 @@ begin
 if (~reset) begin          // global asyncronous reset, initial values
   state <= 1'b0;
   serialize <= 4'd0;
-  delay <= 6'b0;
+  delay <= 7'b0;
   tx <= 1'b1;
   switch <= 5'd0;
   dirTX <= 1'd0;
@@ -48,9 +48,9 @@ end else begin            // main circuit
     end
     DIRON: begin         // set the DIR pins to high level with a tiny delay
       delay <= delay + 1'b1;  // count while in this state
-      if (delay == 6'd15) begin dirRX <= 1'd1; end
-      if (delay == 6'd30) begin dirTX <= 1'd1; end
-      if (delay == 6'd45) begin state <= TX; end  // proceed to next state
+      if (delay == 6'd33) begin dirRX <= 1'd1; end
+      if (delay == 6'd48) begin dirTX <= 1'd1; end
+      if (delay == 6'd63) begin state <= TX; end  // proceed to next state
     end
     TX: begin          // the transfer
       serialize <= serialize + 1'b1;    // count while in this state
@@ -75,8 +75,8 @@ end else begin            // main circuit
     end
     DIROFF: begin        // set the DIR pins to low level with a tiny delay
       delay <= delay + 1'b1;  // count while in this state
-      if (delay == 6'd15) begin dirTX <= 1'd0; end
-      if (delay == 6'd30) begin dirRX <= 1'd0; state <= MEGAWAIT; end  // proceed to next state
+      if (delay == 6'd48) begin dirTX <= 1'd0; end
+      if (delay == 6'd63) begin dirRX <= 1'd0; state <= MEGAWAIT; end  // proceed to next state
     end
     MEGAWAIT: begin      // checking the low level of request signal
       delay <= 6'd0;        // reset previous counter

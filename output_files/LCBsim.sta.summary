@@ -3,35 +3,35 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'mypll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -1.829
-TNS   : -1.829
+Slack : -2.221
+TNS   : -2.221
 
 Type  : Slow 1200mV 85C Model Setup 'clk80MHz'
-Slack : -0.409
-TNS   : -1.916
-
-Type  : Slow 1200mV 85C Model Hold 'mypll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.433
-TNS   : 0.000
+Slack : -0.819
+TNS   : -5.787
 
 Type  : Slow 1200mV 85C Model Hold 'clk80MHz'
 Slack : 0.453
 TNS   : 0.000
 
+Type  : Slow 1200mV 85C Model Hold 'mypll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.453
+TNS   : 0.000
+
 Type  : Slow 1200mV 85C Model Recovery 'mypll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -0.468
-TNS   : -8.554
+Slack : -0.714
+TNS   : -11.458
 
 Type  : Slow 1200mV 85C Model Recovery 'clk80MHz'
-Slack : 9.835
+Slack : 9.467
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'clk80MHz'
-Slack : 1.376
+Slack : 2.010
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'mypll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 3.296
+Slack : 3.381
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk80MHz'
@@ -39,39 +39,39 @@ Slack : 5.985
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mypll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 103.867
+Slack : 103.870
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'mypll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -1.242
-TNS   : -1.242
+Slack : -1.690
+TNS   : -1.690
 
 Type  : Slow 1200mV 0C Model Setup 'clk80MHz'
-Slack : -0.469
-TNS   : -2.217
-
-Type  : Slow 1200mV 0C Model Hold 'mypll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.383
-TNS   : 0.000
+Slack : -0.825
+TNS   : -5.619
 
 Type  : Slow 1200mV 0C Model Hold 'clk80MHz'
 Slack : 0.401
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Recovery 'mypll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.021
+Type  : Slow 1200mV 0C Model Hold 'mypll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.401
 TNS   : 0.000
 
+Type  : Slow 1200mV 0C Model Recovery 'mypll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.228
+TNS   : -1.596
+
 Type  : Slow 1200mV 0C Model Recovery 'clk80MHz'
-Slack : 10.000
+Slack : 9.634
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'clk80MHz'
-Slack : 1.233
+Slack : 1.803
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'mypll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 2.854
+Slack : 2.979
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk80MHz'
@@ -79,47 +79,47 @@ Slack : 5.984
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mypll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 103.841
+Slack : 103.843
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'mypll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 1.375
+Slack : 1.191
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk80MHz'
-Slack : 2.221
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'mypll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.179
+Slack : 1.962
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk80MHz'
-Slack : 0.187
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'mypll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.186
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'mypll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 1.904
+Slack : 1.812
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'clk80MHz'
-Slack : 11.280
+Slack : 11.107
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'clk80MHz'
-Slack : 0.572
+Slack : 0.856
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'mypll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 1.531
+Slack : 1.564
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk80MHz'
-Slack : 5.512
+Slack : 5.513
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mypll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 103.937
+Slack : 103.951
 TNS   : 0.000
 
 ------------------------------------------------------------
