@@ -49,10 +49,10 @@ RQform inst3(
 answers inst4(
 	.clk(clk80MHz),
 	.rst(rst),
+	.ValRX(ValRX),
+	.iUART(DataFromCFM),
 	.addr(ans_addr),
-	.data(ans_data),
-	.strob(ValRX),
-	.slowData(DataFromCFM)
+	.data(ans_data)
 );
 
 UART_TX inst5(

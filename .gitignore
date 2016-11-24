@@ -1,0 +1,15 @@
+**/simulation/modelsim/*
+/incremental_db/
+/db/
+/LCBsim.asm.rpt
+/LCBsim.done
+/LCBsim.eda.rpt
+/LCBsim.fit.rpt
+/LCBsim.flow.rpt
+/LCBsim.map.rpt
+/LCBsim.map.smsg
+/LCBsim.tan.rpt
+/LCBsim_nativelink_simulation.rpt
+/serv_req_info.txt
+*.qws
+*.v.bak

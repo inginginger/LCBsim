@@ -1,20 +1,20 @@
 module answers(
 input clk,
 input rst,
+input ValRX,
+input [7:0] iUART,
 input [4:0] addr,
-input strob,
-input [7:0] slowData,
 output reg[7:0] data);
 
 reg [7:0] cnt;
 reg only;
-reg [1:0] syncStr;
-reg [7:0] cntSlow;
-reg [7:0] oSlowData;
-reg [1:0] cntStr;
+reg [1:0] syncVal;
 
+reg [1:0] cntVal, st;
+reg [9:0] cntbits;
+reg [9:0] outdata;
 always@(posedge clk)
-	syncStr <= {syncStr[0], strob};
+	syncVal <= {syncVal[0], ValRX};
 
 always@(posedge clk or negedge rst)
 begin
@@ -22,21 +22,31 @@ begin
 		data <= 8'd0;
 		cnt <= 8'd0;
 		only <= 1'b0;
-		cntSlow <= 8'd0;
-		oSlowData <= 8'd0;
-		cntStr <= 2'd0;
+		cntVal <= 2'd0;
+		cntbits <= 10'd0;
+		outdata <= 10'd0;
+		st <= 2'd0;
 	end
 	else begin
-		if(syncStr[1])begin//если приняли байт запроса
-			cntStr <= cntStr + 1'b1;//считаем
-			if(cntStr == 2'd1) begin//второй байт=медленный параметр
-				oSlowData <= slowData;//кладем его в 17 байт ответа
-				if(slowData == 8'd1) begin//если медленный параметр = 1
-					cntSlow <= cntSlow + 1'b1;
-					oSlowData <= cntSlow;
-				end//на выходную шину ставим счетчик
+		case(st)
+			0:if(syncVal[1])begin
+				st <= 1;
 			end
-		end
+			1:begin
+				cntVal <= cntVal + 1'b1;
+				if(cntVal == 2'd1) begin
+					if(iUART == 8'd82)begin
+						cntbits <= cntbits + 1'b1;
+						outdata <= cntbits;
+					end 
+					else
+						outdata <= iUART;
+				end
+				st <= 2;
+			end
+			2: if(~syncVal[1])
+				st <= 0;
+		endcase
 		case(addr)
 			0 : begin
 				data <= cnt;
@@ -57,9 +67,9 @@ begin
 			13 : data <= 8'd130;
 			14 : data <= 8'd140;
 			15 : data <= 8'd150;
-			16 : data <= oSlowData;
+			16 : data <= outdata[7:0];
 			17 : begin
-				data <= 8'd0;
+				data <= outdata[9:8];
 				if(only == 1'b0) begin
 					cnt <= cnt + 1'b1;
 					only <= 1'b1;
