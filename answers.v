@@ -35,11 +35,11 @@ begin
 			1:begin
 				cntVal <= cntVal + 1'b1;
 				if(cntVal == 2'd1) begin
-					if(iUART == 8'd82)begin
+					/*if(iUART == 8'd82)begin
 						cntbits <= cntbits + 1'b1;
 						outdata <= cntbits;
 					end 
-					else
+					else*/
 						outdata <= iUART;
 				end
 				st <= 2;
