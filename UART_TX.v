@@ -48,9 +48,9 @@ end else begin            // main circuit
     end
     DIRON: begin         // set the DIR pins to high level with a tiny delay
       delay <= delay + 1'b1;  // count while in this state
-      if (delay == 6'd33) begin dirRX <= 1'd1; end
-      if (delay == 6'd48) begin dirTX <= 1'd1; end
-      if (delay == 6'd63) begin state <= TX; end  // proceed to next state
+      if (delay == 6'd0) begin dirRX <= 1'd1; end
+      if (delay == 6'd10) begin dirTX <= 1'd1; end
+      if (delay == 6'd20) begin state <= TX; end  // proceed to next state
     end
     TX: begin          // the transfer
       serialize <= serialize + 1'b1;    // count while in this state
@@ -63,10 +63,8 @@ end else begin            // main circuit
         9: begin 
           tx <= 1'd1;    // stopbit
           switch <= switch + 1'b1;  // switch memory
-        end
-        10: begin
           serialize <= 4'd0; // reset sequencer
-          if (switch == 5'd18) begin 
+          if (switch == 5'd17) begin 
             switch <= 5'd0; 
             state <= DIROFF; 
           end  // if completed transfer proceed to next state 
@@ -75,8 +73,8 @@ end else begin            // main circuit
     end
     DIROFF: begin        // set the DIR pins to low level with a tiny delay
       delay <= delay + 1'b1;  // count while in this state
-      if (delay == 6'd48) begin dirTX <= 1'd0; end
-      if (delay == 6'd63) begin dirRX <= 1'd0; state <= MEGAWAIT; end  // proceed to next state
+      if (delay == 6'd0) begin dirTX <= 1'd0; end
+      if (delay == 6'd5) begin dirRX <= 1'd0; state <= MEGAWAIT; end  // proceed to next state
     end
     MEGAWAIT: begin      // checking the low level of request signal
       delay <= 6'd0;        // reset previous counter

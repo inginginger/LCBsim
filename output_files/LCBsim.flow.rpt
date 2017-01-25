@@ -1,5 +1,5 @@
 Flow report for LCBsim
-Thu Nov 24 15:54:34 2016
+Wed Jan 25 09:19:50 2017
 Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Thu Nov 24 15:54:34 2016      ;
+; Flow Status                        ; Successful - Wed Jan 25 09:19:50 2017      ;
 ; Quartus II 32-bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; LCBsim                                     ;
 ; Top-level Entity Name              ; LCBsim                                     ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C10E144C8                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 232 / 10,320 ( 2 % )                       ;
-;     Total combinational functions  ; 203 / 10,320 ( 2 % )                       ;
+; Total logic elements               ; 224 / 10,320 ( 2 % )                       ;
+;     Total combinational functions  ; 201 / 10,320 ( 2 % )                       ;
 ;     Dedicated logic registers      ; 139 / 10,320 ( 1 % )                       ;
 ; Total registers                    ; 139                                        ;
 ; Total pins                         ; 19 / 95 ( 20 % )                           ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/24/2016 15:54:19 ;
+; Start date & time ; 01/25/2017 09:19:35 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LCBsim              ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 238368713022791.147999205900708       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 238368713022791.148532517503528       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; LCBsim_tb.v    ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; LCBsim_tb.v                           ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
@@ -112,12 +112,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 401 MB              ; 00:00:01                           ;
-; Fitter                    ; 00:00:06     ; 1.0                     ; 670 MB              ; 00:00:06                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 376 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 416 MB              ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 401 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 673 MB              ; 00:00:06                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 380 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 424 MB              ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 339 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:11     ; --                      ; --                  ; 00:00:11                           ;
+; Total                     ; 00:00:10     ; --                      ; --                  ; 00:00:12                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -7,7 +7,7 @@ input [4:0] addr,
 output reg[7:0] data);
 
 reg [7:0] cnt;
-reg only;
+reg once;
 reg [1:0] syncVal;
 
 reg [1:0] cntVal, st;
@@ -21,7 +21,7 @@ begin
 	if(~rst) begin
 		data <= 8'd0;
 		cnt <= 8'd0;
-		only <= 1'b0;
+		once <= 1'b0;
 		cntVal <= 2'd0;
 		cntbits <= 10'd0;
 		outdata <= 10'd0;
@@ -50,9 +50,9 @@ begin
 		case(addr)
 			0 : begin
 				data <= cnt;
-				only <= 1'b0;
+				once <= 1'b0;
 			end
-			1 : data <= 8'd10;
+			1 : data <= 10;
 			2 : data <= 8'd20;
 			3 : data <= 8'd30;
 			4 : data <= 8'd40;
@@ -70,9 +70,9 @@ begin
 			16 : data <= outdata[7:0];
 			17 : begin
 				data <= outdata[9:8];
-				if(only == 1'b0) begin
+				if(once == 1'b0) begin
 					cnt <= cnt + 1'b1;
-					only <= 1'b1;
+					once <= 1'b1;
 				end
 				/*if(cnt == 8'd255)
 				cnt <= 8'd0;*/
